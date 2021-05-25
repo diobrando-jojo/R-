@@ -95,7 +95,7 @@ for i in range(len(df)):
         re_list.sort()
         n, a = len(re_list), 0.75
         var_point = int(n * (1 - a))
-        var_value = (re_list[var_point] + re_list[var_point]) / 2
+        var_value = (re_list[var_point] + re_list[var_point+1]) / 2
         df.loc[i,'var'] = var_value
     else:
         df.loc[i, 'var'] = 0
